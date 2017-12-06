@@ -1,12 +1,11 @@
 package loescht.advent.dayOne
 
+import loescht.advent.utils.FileReader
+
 class taskOne {
 
     static void main(String[] args) {
-        File inputFile = new File(args[0])
-        Scanner scan = new Scanner(inputFile)
-
-        def captcha = scan.next()
+        def captcha = FileReader.readFile(args[0])
 
         println(solveCaptcha(captcha))
     }
